@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыка — vibeVYBE Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="header">
+
+        <a href="home.html" class="logo">
+            vibe<span>VYBE</span>
+        </a>
+
+        <nav>
+            <a href="home.html">Главная</a>
+            <a href="music.html" class="active">Музыка</a>
+            <a href="playlists.html">Плейлисты</a>
+            <a href="profile.html">Мой профиль</a>
+        </nav>
+
+        <a href="login.html" class="header-login" id="headerLogin">
+            Войти
+        </a>
+
+    </header>
+
+    <main class="page">
+
+        <section class="music-header">
+
+            <div>
+                <span class="eyebrow">VIBEVYBE MUSIC</span>
+
+                <h1>
+                    Найди свою<br>
+                    <span>музыку.</span>
+                </h1>
+            </div>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Напиши название песни или исполнителя..."
+                >
+
+                <button id="searchButton">
+                    Найти
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="music-section">
+
+            <div class="section-title-row">
+                <h2>Результаты поиска</h2>
+                <span id="resultCount"></span>
+            </div>
+
+            <div id="searchResults" class="music-grid">
+
+                <div class="empty-state">
+                    <div>♫</div>
+
+                    <h3>
+                        Здесь появится твоя музыка
+                    </h3>
+
+                    <p>
+                        Найди песню, исполнителя или альбом сверху.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="music-section">
+
+            <div class="section-title-row">
+                <h2>Недавно слушали</h2>
+            </div>
+
+            <div id="historyList" class="history-list"></div>
+
+        </section>
+
+    </main>
+
+    <div class="player" id="player">
+
+        <div class="player-song">
+
+            <img id="playerImage" src="" alt="">
+
+            <div>
+                <strong id="playerTitle">
+                    Ничего не играет
+                </strong>
+
+                <span id="playerArtist">
+                    Выбери песню
+                </span>
+            </div>
+
+        </div>
+
+        <div class="player-controls">
+
+            <button id="previousButton">
+                ◀
+            </button>
+
+            <button id="playButton" class="play-main">
+                ▶
+            </button>
+
+            <button id="nextButton">
+                ▶
+            </button>
+
+        </div>
+
+        <div class="progress-area">
+
+            <span id="currentTime">
+                0:00
+            </span>
+
+            <input
+                type="range"
+                id="progressBar"
+                min="0"
+                max="100"
+                value="0"
+            >
+
+            <span id="duration">
+                0:00
+            </span>
+
+        </div>
+
+    </div>
+
+    <div id="youtubePlayer"></div>
+
+    <div class="modal" id="playlistModal">
+
+        <div class="modal-box">
+
+            <button
+                class="modal-close"
+                id="closePlaylistModal">
+                ×
+            </button>
+
+            <span class="eyebrow">
+                СОХРАНИТЬ МУЗЫКУ
+            </span>
+
+            <h2>
+                Добавить в плейлист
+            </h2>
+
+            <div id="playlistChoices"></div>
+
+            <button
+                id="newPlaylistFromModal"
+                class="outline-button full-button">
+                ＋ Создать новый плейлист
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+</body>
+</html>

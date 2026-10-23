@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Аккаунт — vibeVYBE Music</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-page">
+
+<div class="auth-container">
+
+    <a href="home.html" class="logo auth-logo">
+        vibeVYBE <span>Music</span>
+    </a>
+
+
+    <div class="auth-box">
+
+        <div class="auth-tabs">
+
+            <button
+                id="loginTab"
+                class="auth-tab active"
+            >
+                Вход
+            </button>
+
+            <button
+                id="registerTab"
+                class="auth-tab"
+            >
+                Регистрация
+            </button>
+
+        </div>
+
+
+        <!-- ВХОД -->
+
+        <form id="loginForm">
+
+            <h1>
+                С возвращением.
+            </h1>
+
+            <p>
+                Войди в свой vibeVYBE аккаунт.
+            </p>
+
+
+            <label>
+                Email
+            </label>
+
+            <input
+                id="loginEmail"
+                type="email"
+                placeholder="your@email.com"
+                required
+            >
+
+
+            <label>
+                Пароль
+            </label>
+
+            <input
+                id="loginPassword"
+                type="password"
+                placeholder="••••••••"
+                required
+            >
+
+
+            <button class="neon-button full-button">
+                Войти
+            </button>
+
+        </form>
+
+
+        <!-- РЕГИСТРАЦИЯ -->
+
+        <form
+            id="registerForm"
+            class="hidden"
+        >
+
+            <h1>
+                Создай свой аккаунт.
+            </h1>
+
+            <p>
+                Сохраняй музыку и свои плейлисты.
+            </p>
+
+
+            <label>
+                Имя *
+            </label>
+
+            <input
+                id="registerName"
+                type="text"
+                placeholder="Лилия"
+                required
+            >
+
+
+            <label>
+                Фамилия
+            </label>
+
+            <input
+                id="registerSurname"
+                type="text"
+                placeholder="Необязательно"
+            >
+
+
+            <label>
+                Ник *
+            </label>
+
+            <input
+                id="registerUsername"
+                type="text"
+                placeholder="@vibeyou"
+                required
+            >
+
+
+            <label>
+                Email *
+            </label>
+
+            <input
+                id="registerEmail"
+                type="email"
+                placeholder="your@email.com"
+                required
+            >
+
+
+            <label>
+                Пароль *
+            </label>
+
+            <input
+                id="registerPassword"
+                type="password"
+                placeholder="Минимум 6 символов"
+                required
+            >
+
+
+            <button class="neon-button full-button">
+                Создать аккаунт
+            </button>
+
+        </form>
+
+
+        <div
+            id="authMessage"
+            class="auth-message"
+        ></div>
+
+    </div>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>

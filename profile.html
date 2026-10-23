@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль — vibeVYBE Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="header">
+
+        <a href="home.html" class="logo">
+            vibe<span>VYBE</span>
+        </a>
+
+        <nav>
+            <a href="home.html">Главная</a>
+            <a href="music.html">Музыка</a>
+            <a href="playlists.html">Плейлисты</a>
+            <a href="profile.html" class="active">Мой профиль</a>
+        </nav>
+
+        <a href="login.html" class="header-login" id="headerLogin">
+            Войти
+        </a>
+
+    </header>
+
+    <main class="page">
+
+        <section class="profile-card">
+
+            <div class="profile-main">
+
+                <div class="avatar-wrapper">
+
+                    <img id="profileAvatar" src="" alt="Аватар">
+
+                    <label for="avatarInput" class="avatar-edit">
+                        +
+                    </label>
+
+                    <input
+                        type="file"
+                        id="avatarInput"
+                        accept="image/*"
+                        hidden
+                    >
+
+                </div>
+
+                <div class="profile-info">
+
+                    <span class="eyebrow">МОЙ ПРОФИЛЬ</span>
+
+                    <h1 id="profileName">
+                        Твой профиль
+                    </h1>
+
+                    <p id="profileEmail">
+                        Войди или создай аккаунт
+                    </p>
+
+                    <button class="outline-button" id="editProfileButton">
+                        Редактировать профиль
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="profile-stats">
+
+                <div>
+                    <strong id="songCount">0</strong>
+                    <span>Песен</span>
+                </div>
+
+                <div>
+                    <strong id="playlistCount">0</strong>
+                    <span>Плейлистов</span>
+                </div>
+
+                <div>
+                    <strong id="historyCount">0</strong>
+                    <span>Прослушано</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="profile-section">
+
+            <div class="section-title-row">
+                <h2>Мои плейлисты</h2>
+                <a href="playlists.html">Все →</a>
+            </div>
+
+            <div id="profilePlaylists" class="playlist-grid"></div>
+
+        </section>
+
+        <section class="profile-section">
+
+            <div class="section-title-row">
+                <h2>Недавно слушали</h2>
+                <a href="music.html">Музыка →</a>
+            </div>
+
+            <div id="profileHistory" class="history-list"></div>
+
+        </section>
+
+        <button class="logout-button" id="logoutButton">
+            Выйти из аккаунта
+        </button>
+
+    </main>
+
+    <div class="modal" id="profileModal">
+
+        <div class="modal-box">
+
+            <button class="modal-close" id="closeProfileModal">
+                ×
+            </button>
+
+            <span class="eyebrow">ПРОФИЛЬ</span>
+
+            <h2>Редактирование</h2>
+
+            <label>
+                Имя
+            </label>
+
+            <input
+                type="text"
+                id="profileNameInput"
+                placeholder="Твоё имя"
+            >
+
+            <button class="neon-button full-button" id="saveProfileButton">
+                Сохранить
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
